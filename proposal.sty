@@ -1,0 +1,29 @@
+\ProvidesPackage{proposal}[2018/02/27]
+
+\usepackage[english,ngerman]{babel}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage[exponent-product = \cdot]{siunitx}
+\usepackage{rotating}
+\usepackage{helvet}
+\usepackage{eurosym}
+
+\usepackage[backend = biber,
+    style = authoryear,
+    natbib = true,
+    hyperref = true
+    ]{biblatex}
+\addbibresource{sources.bib}
+
+\DeclareOption{german}{
+    \sisetup{locale=DE}
+    \AtBeginDocument{\selectlanguage{ngerman}}
+}
+\DeclareOption{english}{
+    \sisetup{locale=US}
+    \AtBeginDocument{\selectlanguage{english}}
+}
+\ExecuteOptions{german}
+\ProcessOptions\relax
+
+\renewcommand\familydefault{\sfdefault}
