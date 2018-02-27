@@ -15,13 +15,28 @@
     ]{biblatex}
 \addbibresource{sources.bib}
 
+\newcommand{\pheader}{}
 \DeclareOption{german}{
     \sisetup{locale=DE}
     \AtBeginDocument{\selectlanguage{ngerman}}
+    \renewcommand{\pheader}{
+    	{\raggedright \normalsize \bfseries 
+    	Beschreibung des Vorhabens -- Projektanträge
+    	\rule{\textwidth}{0.5pt} \par
+    	Beschreibung des Vorhabens
+    	}
+    }
 }
 \DeclareOption{english}{
     \sisetup{locale=US}
-    \AtBeginDocument{\selectlanguage{english}}
+    \AtBeginDocument{\selectlanguage{english}}    
+    \renewcommand{\pheader}{
+    	{\raggedright \normalsize \bfseries 
+    	Project Description -- Project Proposals
+    	\rule{\textwidth}{0.5pt} \par
+    	Project Description
+    	}
+    }
 }
 \ExecuteOptions{german}
 \ProcessOptions\relax
@@ -30,3 +45,5 @@
 \setkomafont{subsection}{\normalsize}
 \renewcommand\familydefault{\sfdefault}
 \setlength{\parskip}{0.5em}
+
+\AtBeginDocument{\pheader}
