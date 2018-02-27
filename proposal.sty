@@ -8,6 +8,8 @@
 \usepackage[exponent-product = \cdot]{siunitx}
 \usepackage{rotating}
 \usepackage{helvet}
+\usepackage{lastpage}
+\usepackage{scrlayer-scrpage}
 \usepackage{eurosym}
 
 \usepackage[backend = biber,
@@ -28,6 +30,7 @@
     	Beschreibung des Vorhabens
     	}
     }
+    \renewcommand{\pagemark}{Seite \thepage~von \pageref{LastPage}}
 }
 \DeclareOption{english}{
     \sisetup{locale=US}
@@ -39,13 +42,18 @@
     	Project Description
     	}
     }
+	\renewcommand{\pagemark}{page \thepage~of \pageref{LastPage}}
 }
 \ExecuteOptions{german}
 \ProcessOptions\relax
+\ohead{\pagemark}
+\cfoot{}
 
+\pagestyle{scrheadings}
 \setkomafont{section}{\normalsize}
 \setkomafont{subsection}{\normalsize}
 \renewcommand{\familydefault}{\sfdefault}
+\renewcommand{\headfont}{\sffamily\footnotesize}
 \setlength{\parskip}{0.5em}
 
 \AtBeginDocument{\pheader}
