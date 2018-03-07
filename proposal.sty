@@ -11,6 +11,7 @@
 \usepackage{lastpage}
 \usepackage{scrlayer-scrpage}
 \usepackage{eurosym}
+\usepackage{fp}
 
 \usepackage{tikz}
 \usepackage{pgfplots}
@@ -24,6 +25,7 @@
     ]{biblatex}
 
 \newcommand{\pheader}{}
+\newcommand{\total}{}
 \DeclareOption{german}{
     \sisetup{locale=DE}
     \AtBeginDocument{\selectlanguage{ngerman}}
@@ -35,6 +37,7 @@
     	}
     }
     \renewcommand{\pagemark}{Seite \thepage~von \pageref{LastPage}}
+    \renewcommand{\total}{Summe}
 }
 \DeclareOption{english}{
     \sisetup{locale=US}
@@ -47,6 +50,7 @@
     	}
     }
 	\renewcommand{\pagemark}{page \thepage~of \pageref{LastPage}}
+    \renewcommand{\total}{Total}
 }
 \ExecuteOptions{german}
 \ProcessOptions\relax
@@ -68,3 +72,16 @@
 \setcounter{secnumdepth}{5}
 
 \AtBeginDocument{\pheader}
+
+% Ensure that if round-precision is specified, the give number of decimals is printed (necessary for prices in Euro)
+\sisetup{round-integer-to-decimal} 
+
+% Place this environment in funds section to automatically add up costs using the macro 'position'.
+\newenvironment{funds}[1][]
+    % Define variable funds for calculation. Store argument (description of total) in new command.
+    {\def\funds{0.00} \newcommand{\totaldescr}{#1}}
+    % Print total of environment with provided description. 
+    {\par \total~\totaldescr \hfill \num[round-mode = places, round-precision = 2]{\funds}\,\euro}
+    
+% To be used inside a funds environment. Place text and add given price to totals.
+\newcommand{\position}[2]{\par #1 \hfill \num[round-mode = places, round-precision = 2]{#2}\,\euro \FPeval{\funds}{\funds + #2}}
