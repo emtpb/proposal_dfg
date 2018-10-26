@@ -27,35 +27,16 @@
     ]{biblatex}
 \renewcommand*{\labelalphaothers}{}
 
-\newcommand{\pheader}{}
 \newcommand{\total}{}
 \DeclareOption{german}{
     \sisetup{locale=DE}
     \AtBeginDocument{\selectlanguage{ngerman}}
-    \renewcommand{\pheader}{
-    	{\raggedright \normalsize \bfseries 
-    	Beschreibung des Vorhabens -- Projektanträge \par
-        \applicants \par
-        \project \par
-    	\rule{\textwidth}{0.5pt} \par
-    	Beschreibung des Vorhabens
-    	}
-    }
     \renewcommand{\pagemark}{Seite \thepage~von \pageref{LastPage}}
     \renewcommand{\total}{Summe}
 }
 \DeclareOption{english}{
     \sisetup{locale=US}
-    \AtBeginDocument{\selectlanguage{english}}    
-    \renewcommand{\pheader}{
-    	{\raggedright \normalsize \bfseries 
-    	Project Description -- Project Proposals \par
-        \applicants \par
-        \project \par
-    	\rule{\textwidth}{0.5pt} \par
-    	Project Description
-    	}
-    }
+    \AtBeginDocument{\selectlanguage{english}}
 	\renewcommand{\pagemark}{page \thepage~of \pageref{LastPage}}
     \renewcommand{\total}{Total}
 }
@@ -77,8 +58,6 @@
 
 \newcommand{\subsubsubsection}[1]{\paragraph{#1} \mbox{} \par}
 \setcounter{secnumdepth}{5}
-
-\AtBeginDocument{\pheader}
 
 % Ensure that if round-precision is specified, the give number of decimals is printed (necessary for prices in Euro)
 \sisetup{round-integer-to-decimal} 
