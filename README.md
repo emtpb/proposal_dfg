@@ -18,7 +18,9 @@ Features
   * *pgfgant* for Gantt charts/schedules.
 
 
-Disclaimer
-----------
+Successful applications
+-----------------------
 
-As of now, no proposal has been submitted to the DFG using this template. Therefore we do not yet know if the formatting, although made to match the original rich text template, will be accepted by the officials.
+This template was use to apply for the following projects:
+
+* A model-based measurement procedure for the characterization of frequency-dependent material properties of piezoceramics using a singleton specimen ([321120716](https://gepris.dfg.de/gepris/projekt/321120716))
