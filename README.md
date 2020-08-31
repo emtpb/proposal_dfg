@@ -24,3 +24,4 @@ Successful applications
 This template was used to apply for the following projects:
 
 * A model-based measurement procedure for the characterization of frequency-dependent material properties of piezoceramics using a singleton specimen ([321120716](https://gepris.dfg.de/gepris/projekt/321120716))
+* Lamb wave modes repulsion in multi-layered structures ([449607253](https://gepris.dfg.de/gepris/projekt/449607253))
