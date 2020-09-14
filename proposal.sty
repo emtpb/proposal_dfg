@@ -58,6 +58,11 @@
 \setlength{\parskip}{0.5em}
 \setlength{\parindent}{0em}
 
+% Avoid hyperref warning when using the listed commands in section titles etc.:
+\pdfstringdefDisableCommands{%
+  \def\underline#1{<#1>}%
+}
+
 \newcommand{\subsubsubsection}[1]{\paragraph{#1} \mbox{} \par}
 \setcounter{secnumdepth}{5}
 
