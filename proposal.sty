@@ -70,9 +70,6 @@
 \newcommand{\subsubsubsection}[1]{\paragraph{#1} \mbox{} \par}
 \setcounter{secnumdepth}{5}
 
-% Ensure that if round-precision is specified, the give number of decimals is printed (necessary for prices in Euro)
-\sisetup{round-integer-to-decimal} 
-
 % Place this environment in funds section to automatically add up costs using the macro 'position'.
 \newenvironment{funds}[1][]
     % Define variable funds for calculation. Store argument (description of total) in new command.
