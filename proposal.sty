@@ -75,9 +75,9 @@
 \newenvironment{funds}[1][]
     % Define variable funds for calculation. Store argument (description of total) in new command.
     {\def\funds{0.00} \newcommand{\totaldescr}{#1}}
-    % Print total of environment with provided description. 
+    % Print total of environment with provided description.
     {\rule{\textwidth}{0.5pt} \par \total~\totaldescr \hfill \num[round-mode = places, round-precision = 2]{\funds}\,\euro}
-    
+
 % To be used inside a funds environment. Place text and add given price to totals.
 \newcommand{\position}[2]{\par #1 \hfill \num[round-mode = places, round-precision = 2]{#2}\,\euro \FPeval{\funds}{\funds + #2}}
 % Same as above but with multiples of a position.
