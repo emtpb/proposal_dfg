@@ -36,13 +36,13 @@
 
 \newcommand{\total}{}
 \DeclareOption{german}{
-    \sisetup{locale=DE}
+    \sisetup{locale=DE,detect-all}
     \AtBeginDocument{\selectlanguage{ngerman}}
     \renewcommand{\pagemark}{Seite \thepage~von \pageref{LastPage}}
     \renewcommand{\total}{Summe}
 }
 \DeclareOption{english}{
-    \sisetup{locale=US}
+    \sisetup{locale=US,detect-all}
     \AtBeginDocument{\selectlanguage{english}}
 	\renewcommand{\pagemark}{page \thepage~of \pageref{LastPage}}
     \renewcommand{\total}{Total}
