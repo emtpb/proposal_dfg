@@ -34,21 +34,50 @@
 \DeclareBibliographyCategory{patents_pending}
 \DeclareBibliographyCategory{patents}
 
+\newcommand{\maxpage}{}
+\newcommand{\page}{}
+\newcommand{\of}{}
+\newcommand{\ofmax}{}
 \newcommand{\total}{}
+
 \DeclareOption{german}{
     \sisetup{locale=DE,detect-all}
     \AtBeginDocument{\selectlanguage{ngerman}}
-    \renewcommand{\pagemark}{Seite \thepage~von \pageref{LastPage}}
+    \renewcommand{\page}{Seite }
+    \renewcommand{\of}{ von }
+    \renewcommand{\ofmax}{ von max.\ }
     \renewcommand{\total}{Summe}
 }
+
 \DeclareOption{english}{
     \sisetup{locale=US,detect-all}
     \AtBeginDocument{\selectlanguage{english}}
-	\renewcommand{\pagemark}{page \thepage~of \pageref{LastPage}}
+    \renewcommand{\page}{page }
+    \renewcommand{\of}{ of }
+    \renewcommand{\ofmax}{ of max.\ }
     \renewcommand{\total}{Total}
 }
+
+\DeclareOption{53.01}{
+    \renewcommand{\maxpage}{17}
+    \renewcommand{\pagemark}{\page \thepage \ofmax \maxpage}
+}
+
+\DeclareOption{53.02}{
+    \renewcommand{\pagemark}{\page \thepage}
+}
+
+\DeclareOption{53.20}{
+    \renewcommand{\pagemark}{\page \thepage}
+}
+
+\DeclareOption{53.200}{
+    \renewcommand{\pagemark}{\page \thepage \of \pageref{LastPage}}
+}
+
 \ExecuteOptions{german}
 \ProcessOptions\relax
+
 \ohead{\pagemark}
 \cfoot{}
 \chead{}
