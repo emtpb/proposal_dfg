@@ -75,6 +75,10 @@
     \renewcommand{\pagemark}{\page \thepage \of \pageref{LastPage}}
 }
 
+\DeclareOption{9ptbibliography}{
+    \renewcommand{\bibfont}{\footnotesize}
+}
+
 \ExecuteOptions{german}
 \ProcessOptions\relax
 
