@@ -46,9 +46,9 @@
 \DeclareOption{german}{
     \sisetup{locale=DE,detect-all}
     \AtBeginDocument{\selectlanguage{ngerman}}
-    \renewcommand{\page}{Seite }
-    \renewcommand{\of}{ von }
-    \renewcommand{\ofmax}{ von max.\ }
+    \renewcommand{\page}{Seite}
+    \renewcommand{\of}{von}
+    \renewcommand{\ofmax}{von max.}
     \renewcommand{\total}{Summe}
     \renewcommand{\dfgform}{DFG-Vordruck}
 }
@@ -56,34 +56,34 @@
 \DeclareOption{english}{
     \sisetup{locale=US,detect-all}
     \AtBeginDocument{\selectlanguage{english}}
-    \renewcommand{\page}{page }
-    \renewcommand{\of}{ of }
-    \renewcommand{\ofmax}{ of max.\ }
+    \renewcommand{\page}{page}
+    \renewcommand{\of}{of}
+    \renewcommand{\ofmax}{of max.}
     \renewcommand{\total}{Total}
     \renewcommand{\dfgform}{DFG form}
 }
 
 \DeclareOption{53.01}{
     \renewcommand{\maxpage}{17}
-    \renewcommand{\pagemark}{\page \thepage \ofmax \maxpage}
+    \renewcommand{\pagemark}{\page{} \thepage{} \ofmax{} \maxpage{}}
     \renewcommand{\formnumber}{53.01}
     \renewcommand{\formdate}{03/25}
 }
 
 \DeclareOption{53.02}{
-    \renewcommand{\pagemark}{\page \thepage \of \pageref{LastPage}}
+    \renewcommand{\pagemark}{\page{} \thepage{} \of{} \pageref{LastPage}}
     \renewcommand{\formnumber}{53.02}
     \renewcommand{\formdate}{03/25}
 }
 
 \DeclareOption{53.20}{
-    \renewcommand{\pagemark}{\page \thepage}
+    \renewcommand{\pagemark}{\page{} \thepage{}}
     \renewcommand{\formnumber}{53.20}
     \renewcommand{\formdate}{08/23}
 }
 
 \DeclareOption{53.200}{
-    \renewcommand{\pagemark}{\page \thepage \of \pageref{LastPage}}
+    \renewcommand{\pagemark}{\page{} \thepage{} \of{} \pageref{LastPage}}
     \renewcommand{\formnumber}{53.200}
     \renewcommand{\formdate}{07/25}
 }
