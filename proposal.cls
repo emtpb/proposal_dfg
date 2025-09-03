@@ -183,6 +183,14 @@
 \newcommand{\subsubsubsection}[1]{\paragraph{#1} \mbox{} \par}
 \setcounter{secnumdepth}{5}
 
+% Macro to reset the page counter and provide a new maximum page number
+\newcommand{\resetpagecount}[1]{%
+    \clearpage
+    \renewcommand{\maxpage}{#1}
+    \setcounter{page}{1}
+}
+
+
 % Place this environment in funds section to automatically add up costs using the macro 'position'.
 \newenvironment{funds}[1][]
     % Define variable funds for calculation. Store argument (description of total) in new command.
