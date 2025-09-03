@@ -15,10 +15,6 @@ Features
 * An environment *funds* that can be used to automatically sum up all costs specified using the following macros:
   * *position* for single objects.
   * *positionmul* for multiples.
-* Many useful packages already imported, such as:
-  * *tikz* and *pgfplots* for graphics and plots.
-  * *siunitx* for correct unit formatting.
-  * *pgfgant* for Gantt charts/schedules.
 
 
 Successful applications

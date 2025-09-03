@@ -1,8 +1,6 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{proposal}[2025 proposal]
 
-\RequirePackage[utf8]{inputenc}
-
 % Load base class
 \LoadClass[%
     a4paper,
@@ -16,26 +14,18 @@
 \newcommand*{\@project}{}
 \newcommand*{\project}[1]{\gdef\@project{#1}}
 
-
 \RequirePackage[T1]{fontenc}
 \RequirePackage{scrlayer-scrpage}
 \RequirePackage{lastpage}
 \RequirePackage[english, ngerman]{babel}
 \RequirePackage{csquotes}
-\RequirePackage{amsmath}
 \RequirePackage[hidelinks]{hyperref}
-\RequirePackage{microtype}
-\RequirePackage[exponent-product = \cdot]{siunitx}
-\RequirePackage{rotating}
 \RequirePackage{helvet}
+\RequirePackage{microtype}
+\RequirePackage{amsmath}
+\RequirePackage[exponent-product = \cdot]{siunitx}
 \RequirePackage{eurosym}
 \RequirePackage{fp}
-\RequirePackage{pgfgantt}
-\RequirePackage{booktabs}
-
-\RequirePackage{tikz}
-\RequirePackage{pgfplots}
-\pgfplotsset{compat=newest}
 
 \RequirePackage[backend = biber,
     style = alphabetic,
