@@ -1,27 +1,34 @@
-\ProvidesPackage{proposal}
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesClass{proposal}[2025 proposal]
 
-\usepackage[T1]{fontenc}
-\usepackage[english, ngerman]{babel}
-\usepackage{csquotes}
-\usepackage{amsmath}
-\usepackage[hidelinks]{hyperref}
-\usepackage{microtype}
-\usepackage[headheight = 28pt, tmargin = 70pt, lmargin = 55pt, rmargin = 55pt, bmargin = 70pt]{geometry}
-\usepackage[exponent-product = \cdot]{siunitx}
-\usepackage{rotating}
-\usepackage{helvet}
-\usepackage{lastpage}
-\usepackage{scrlayer-scrpage}
-\usepackage{eurosym}
-\usepackage{fp}
-\usepackage{pgfgantt}
-\usepackage{booktabs}
+\RequirePackage[utf8]{inputenc}
 
-\usepackage{tikz}
-\usepackage{pgfplots}
+% Load base class
+\LoadClass[%
+]{scrartcl}
+
+\RequirePackage[T1]{fontenc}
+\RequirePackage[english, ngerman]{babel}
+\RequirePackage{csquotes}
+\RequirePackage{amsmath}
+\RequirePackage[hidelinks]{hyperref}
+\RequirePackage{microtype}
+\RequirePackage[headheight = 28pt, tmargin = 70pt, lmargin = 55pt, rmargin = 55pt, bmargin = 70pt]{geometry}
+\RequirePackage[exponent-product = \cdot]{siunitx}
+\RequirePackage{rotating}
+\RequirePackage{helvet}
+\RequirePackage{lastpage}
+\RequirePackage{scrlayer-scrpage}
+\RequirePackage{eurosym}
+\RequirePackage{fp}
+\RequirePackage{pgfgantt}
+\RequirePackage{booktabs}
+
+\RequirePackage{tikz}
+\RequirePackage{pgfplots}
 \pgfplotsset{compat=newest}
 
-\usepackage[backend = biber,
+\RequirePackage[backend = biber,
     style = alphabetic,
     giveninits = true,
     natbib = true,
