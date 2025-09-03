@@ -7,6 +7,13 @@
 \LoadClass[%
 ]{scrartcl}
 
+% Document title macros
+\newcommand*{\@applicant}{}
+\newcommand*{\applicant}[1]{\gdef\@applicant{#1}}
+\newcommand*{\@project}{}
+\newcommand*{\project}[1]{\gdef\@project{#1}}
+
+
 \RequirePackage[T1]{fontenc}
 \RequirePackage[english, ngerman]{babel}
 \RequirePackage{csquotes}
@@ -47,6 +54,7 @@
 \newcommand{\dfgform}{}
 \newcommand{\formnumber}{}
 \newcommand{\formdate}{}
+\newcommand{\settitle}
 
 \DeclareOption{german}{
     \sisetup{locale=DE,detect-all}
@@ -73,18 +81,78 @@
     \renewcommand{\pagemark}{\page{} \thepage{} \ofmax{} \maxpage{}}
     \renewcommand{\formnumber}{53.01}
     \renewcommand{\formdate}{03/25}
+    \@ifclasswith{proposal}{german}{%
+        \renewcommand{\settitle}{%
+            {\raggedright{}\normalsize\bfseries
+            Beschreibung des Vorhabens - Projektanträge\par
+            \@applicant\par
+            \@project\par
+            \rule{\textwidth}{0.5pt}\par
+            Beschreibung des Vorhabens}
+        }
+    }{%
+        \renewcommand{\settitle}{%
+            {\raggedright{}\normalsize\bfseries
+            Project Description - Project Proposals\par
+            \@applicant\par
+            \@project\par
+            \rule{\textwidth}{0.5pt}\par
+            Project Description}
+        }
+    }
+    \AddToHook{begindocument/end}{\settitle}
 }
 
 \DeclareOption{53.02}{
     \renewcommand{\pagemark}{\page{} \thepage{} \of{} \pageref{LastPage}}
     \renewcommand{\formnumber}{53.02}
     \renewcommand{\formdate}{03/25}
+    \@ifclasswith{proposal}{german}{%
+        \renewcommand{\settitle}{%
+            {\raggedright{}\normalsize\bfseries
+            Gesamtbeschreibung der (Klinischen) Forschungsgruppe und des Koordinationsantrags\par
+            \@applicant\par
+            \@project\par
+            \rule{\textwidth}{0.5pt}\par
+            Gesamtbeschreibung der (Klinischen) Forschungsgruppe und des Koordinationsantrags}
+        }
+    }{%
+        \renewcommand{\settitle}{%
+            {\raggedright{}\normalsize\bfseries
+            Overall Description of the (Clinical) Research Unit and the Coordination Proposal\par
+            \@applicant\par
+            \@project\par
+            \rule{\textwidth}{0.5pt}\par
+            Overall Description of the (Clinical) Research Unit and the Coordination Proposal}
+        }
+    }
+    \AddToHook{begindocument/end}{\settitle}
 }
 
 \DeclareOption{53.20}{
     \renewcommand{\pagemark}{\page{} \thepage{}}
     \renewcommand{\formnumber}{53.20}
     \renewcommand{\formdate}{08/23}
+    \@ifclasswith{proposal}{german}{%
+        \renewcommand{\settitle}{%
+            {\raggedright{}\normalsize\bfseries
+            Beschreibung des Vorhabens - Antragsskizze Forschungsgruppe\par
+            \@applicant\par
+            \@project\par
+            \rule{\textwidth}{0.5pt}\par
+            Beschreibung des Vorhabens - Antragsskizze Forschungsgruppe}
+        }
+    }{%
+        \renewcommand{\settitle}{%
+            {\raggedright{}\normalsize\bfseries
+            Project Description - Draft Proposal for a Research Unit\par
+            \@applicant\par
+            \@project\par
+            \rule{\textwidth}{0.5pt}\par
+            Project Description - Draft Proposal for a Research Unit}
+        }
+    }
+    \AddToHook{begindocument/end}{\settitle}
 }
 
 \DeclareOption{53.200}{
