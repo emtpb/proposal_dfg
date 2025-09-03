@@ -5,6 +5,9 @@
 
 % Load base class
 \LoadClass[%
+    a4paper,
+    fontsize=11pt,
+    captions=tableheading,
 ]{scrartcl}
 
 % Document title macros
@@ -15,17 +18,16 @@
 
 
 \RequirePackage[T1]{fontenc}
+\RequirePackage{scrlayer-scrpage}
+\RequirePackage{lastpage}
 \RequirePackage[english, ngerman]{babel}
 \RequirePackage{csquotes}
 \RequirePackage{amsmath}
 \RequirePackage[hidelinks]{hyperref}
 \RequirePackage{microtype}
-\RequirePackage[headheight = 28pt, tmargin = 70pt, lmargin = 55pt, rmargin = 55pt, bmargin = 70pt]{geometry}
 \RequirePackage[exponent-product = \cdot]{siunitx}
 \RequirePackage{rotating}
 \RequirePackage{helvet}
-\RequirePackage{lastpage}
-\RequirePackage{scrlayer-scrpage}
 \RequirePackage{eurosym}
 \RequirePackage{fp}
 \RequirePackage{pgfgantt}
@@ -168,20 +170,20 @@
 \ExecuteOptions{german}
 \ProcessOptions\relax
 
+% Page layout
 \ihead{\dfgform{} \formnumber{} -- \formdate{}}
 \ohead{\pagemark}
 \cfoot{}
 \chead{}
-
-\KOMAoptions{paper=a4}
-\KOMAoption{fontsize}{11pt}
 \pagestyle{scrheadings}
+\KOMAoptions{DIV=12}
+\setlength{\parskip}{0.5em}
+\setlength{\parindent}{0em}
+
 \setkomafont{section}{\normalsize}
 \setkomafont{subsection}{\normalsize}
 \renewcommand{\familydefault}{\sfdefault}
 \renewcommand{\headfont}{\sffamily\footnotesize}
-\setlength{\parskip}{0.5em}
-\setlength{\parindent}{0em}
 
 % Avoid hyperref warning when using the listed commands in section titles etc.:
 \pdfstringdefDisableCommands{%
