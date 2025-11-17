@@ -72,7 +72,7 @@
     \renewcommand{\maxpage}{17}
     \renewcommand{\pagemark}{\page{} \thepage{} \ofmax{} \maxpage{}}
     \renewcommand{\formnumber}{53.01}
-    \renewcommand{\formdate}{03/25}
+    \renewcommand{\formdate}{09/25}
     \@ifclasswith{proposal}{german}{%
         \renewcommand{\settitle}{%
             {\raggedright{}\normalsize\bfseries
