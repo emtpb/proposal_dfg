@@ -29,4 +29,4 @@ These templates were used to apply for the following projects:
 * Lamb wave modes repulsion in multi-layered structures II ([449607253](https://gepris.dfg.de/gepris/projekt/449607253))
 
 Did you submit a successful application using one of these templates? 
-Feel free to tell us so we can add your project to the list above.
+Feel free to tell us, so we can add your project to the list above.
