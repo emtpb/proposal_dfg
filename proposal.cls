@@ -98,7 +98,7 @@
 \DeclareOption{53.02}{
     \renewcommand{\pagemark}{\page{} \thepage{} \of{} \pageref{LastPage}}
     \renewcommand{\formnumber}{53.02}
-    \renewcommand{\formdate}{03/25}
+    \renewcommand{\formdate}{10/25}
     \@ifclasswith{proposal}{german}{%
         \renewcommand{\settitle}{%
             {\raggedright{}\normalsize\bfseries
