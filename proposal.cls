@@ -35,6 +35,7 @@
     maxbibnames = 10,
     ]{biblatex}
 \renewcommand*{\labelalphaothers}{}
+\urlstyle{same}
 \DeclareBibliographyCategory{reviewed}
 \DeclareBibliographyCategory{nonreviewed}
 
