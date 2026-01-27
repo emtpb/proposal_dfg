@@ -198,7 +198,7 @@
     {\def\funds{0.00} \newcommand{\totaldescr}{#1}}
     % Print total of environment with provided description.
     {%
-        \filbreak%
+        \par
         \rule{\textwidth}{0.5pt} \\[\parskip]%
         \total~\totaldescr \hfill \num[round-mode = places, round-precision = 2]{\funds}\,\euro%
     }
