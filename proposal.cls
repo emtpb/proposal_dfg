@@ -14,19 +14,18 @@
 \newcommand*{\@project}{}
 \newcommand*{\project}[1]{\gdef\@project{#1}}
 
+
 \RequirePackage[T1]{fontenc}
+\RequirePackage{helvet}
 \RequirePackage{scrlayer-scrpage}
 \RequirePackage{lastpage}
 \RequirePackage[english, ngerman]{babel}
 \RequirePackage{csquotes}
-\RequirePackage[hidelinks]{hyperref}
-\RequirePackage{helvet}
 \RequirePackage{microtype}
 \RequirePackage{amsmath}
 \RequirePackage[exponent-product = \cdot]{siunitx}
 \RequirePackage{eurosym}
 \RequirePackage{fp}
-
 \RequirePackage[backend = biber,
     style = alphabetic,
     giveninits = true,
@@ -34,6 +33,8 @@
     hyperref = true,
     maxbibnames = 10,
     ]{biblatex}
+\RequirePackage[hidelinks]{hyperref}
+
 \renewcommand*{\labelalphaothers}{}
 \urlstyle{same}
 \DeclareBibliographyCategory{reviewed}
