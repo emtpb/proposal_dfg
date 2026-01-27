@@ -176,6 +176,13 @@
 \renewcommand{\familydefault}{\sfdefault}
 \renewcommand{\headfont}{\sffamily\footnotesize}
 
+\RedeclareSectionCommand[
+    afterindent=false,
+    beforeskip=.5\baselineskip plus .5\baselineskip,
+    afterskip=.01\baselineskip,
+    font=\normalsize
+]{subsubsection}
+
 % Avoid hyperref warning when using the listed commands in section titles etc.:
 \pdfstringdefDisableCommands{%
     \def\underline#1{<#1>}%
