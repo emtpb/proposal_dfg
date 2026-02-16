@@ -159,6 +159,10 @@
     \renewcommand{\bibfont}{\footnotesize}
 }
 
+\DeclareOption{10ptbibliography}{
+    \renewcommand{\bibfont}{\small}
+}
+
 \ExecuteOptions{german}
 \ProcessOptions\relax
 
