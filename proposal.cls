@@ -179,6 +179,20 @@
 
 \RedeclareSectionCommand[
     afterindent=false,
+    beforeskip=.9\baselineskip plus .9\baselineskip,
+    afterskip=.01\baselineskip,
+    font=\normalsize
+]{section}
+
+\RedeclareSectionCommand[
+    afterindent=false,
+    beforeskip=.7\baselineskip plus .7\baselineskip,
+    afterskip=.01\baselineskip,
+    font=\normalsize
+]{subsubsection}
+
+\RedeclareSectionCommand[
+    afterindent=false,
     beforeskip=.5\baselineskip plus .5\baselineskip,
     afterskip=.01\baselineskip,
     font=\normalsize
