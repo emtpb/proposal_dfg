@@ -48,7 +48,8 @@
 \newcommand{\dfgform}{}
 \newcommand{\formnumber}{}
 \newcommand{\formdate}{}
-\newcommand{\settitle}
+\newcommand{\settitle}{}
+\newcommand{\clinical}{}
 
 \DeclareOption{german}{
     \sisetup{locale=DE,detect-all}
@@ -104,20 +105,20 @@
     \@ifclasswith{proposal}{german}{%
         \renewcommand{\settitle}{%
             {\raggedright{}\normalsize\bfseries
-            Gesamtbeschreibung der (Klinischen) Forschungsgruppe und des Koordinationsantrags\par
+            Gesamtbeschreibung der \clinical{}Forschungsgruppe und des Koordinationsantrags\par
             \@applicant\par
             \@project\par
             \rule{\textwidth}{0.5pt}\par
-            Gesamtbeschreibung der (Klinischen) Forschungsgruppe und des Koordinationsantrags}
+            Gesamtbeschreibung der \clinical{}Forschungsgruppe und des Koordinationsantrags}
         }
     }{%
         \renewcommand{\settitle}{%
             {\raggedright{}\normalsize\bfseries
-            Overall Description of the (Clinical) Research Unit and the Coordination Proposal\par
+            Overall Description of the \clinical{}Research Unit and the Coordination Proposal\par
             \@applicant\par
             \@project\par
             \rule{\textwidth}{0.5pt}\par
-            Overall Description of the (Clinical) Research Unit and the Coordination Proposal}
+            Overall Description of the \clinical{}Research Unit and the Coordination Proposal}
         }
     }
     \AddToHook{begindocument/end}{\settitle}
@@ -161,6 +162,14 @@
 
 \DeclareOption{10ptbibliography}{
     \renewcommand{\bibfont}{\small}
+}
+
+\DeclareOption{clinical}{
+    \@ifclasswith{proposal}{german}{%
+        \renewcommand{\clinical}{Klinischen }
+    }{%
+        \renewcommand{\clinical}{Clinical }
+    }
 }
 
 \ExecuteOptions{german}
