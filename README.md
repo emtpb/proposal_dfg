@@ -15,7 +15,10 @@ Features
 * An environment *funds* that can be used to automatically sum up all costs specified using the following macros:
   * *position* for single objects.
   * *positionmul* for multiples.
-
+* Further document class options:
+  * *10ptbibliography* to decrease bibliography font size to 10 pt.
+  * *9ptbibliography* to decrease bibliography font size to 9 pt.
+  * *clinical* for clinical research unit proposals (form 53.02 only).
 
 Successful applications
 -----------------------
